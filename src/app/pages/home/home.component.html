@@ -1,0 +1,54 @@
+<div class="w-2/5 mx-auto">
+    <h1 class="text-center text-4xl mb-5 text-blue-800 max-w-md ml-[100px]">Registo de Personas</h1>
+    <app-hijo [title]="titleResultado" [datoHijo]="dato"></app-hijo>
+  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md ml-[100px] mt-5">
+    <div class="mr-10">
+      <div class="form-group mb-6">
+        <label for="nombre" class="form-label inline-block mb-2 text-gray-700"
+          >Nombre</label
+        >
+        <input
+          type="text"
+          [(ngModel)]="nombre"
+          class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+          id="nombre"
+          placeholder="Ingrese su nombre"
+        />
+      </div>
+
+      <div class="form-group mb-6">
+        <label for="dni" class="form-label inline-block mb-2 text-gray-700"
+          >DNI:</label
+        >
+        <input
+          type="text"
+          [(ngModel)]="dni"
+          class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+          id="dni"
+          placeholder="Ingrese su DNI"
+        />
+      </div>
+      <div class="form-group mb-6">
+        <label for="estado" class="form-label inline-block mb-2 text-gray-700"
+          >Estado civil:</label
+        >
+        <select
+          [(ngModel)]="estado"
+          class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+          id="estado"
+        >
+          <option value="Soltero">Soltero</option>
+          <option value="Casado">Casado</option>
+          <option value="Divorciado">Divorciado</option>
+          <option value="Viudo">Viudo</option>
+        </select>
+      </div>
+      <button
+        (click)="mostrar()"
+        class="w-full px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+      >
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>
